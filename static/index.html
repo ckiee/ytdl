@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Youtube downloader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form>
+        <label for="yturl">Youtube URL</label>
+        <input type="url" name="yturl" id="yturl" placeholder="https://www.youtube.com/watch?v=ashk0ifguh">
+        <button type="submit" file-type="mp3">Download MP3</button>
+        <button type="submit">Download MP4</button>
+    </form>
+</body>
+<script>
+document.querySelector("form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const yturl = document.querySelector("#yturl").value;
+    const btn = document.activeElement;
+    if (!yturl.startsWith("https://www.youtube.com/watch?v=")) {
+        alert("Not a youtube url");
+        return;
+    }
+    const type = btn.getAttribute("file-type") == "mp3" ? "mp3" : "mp4";
+    window.open(`${location.origin}/api?url=${encodeURIComponent(yturl)}&type=${type}`);
+});
+</script>
+</html>

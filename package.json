@@ -1,0 +1,13 @@
+{
+  "name": "ytdlfm",
+  "version": "1.0.0",
+  "description": "Ytdl web interface bc mom needs one",
+  "main": "app.js",
+  "author": "RONTheCookie <ronthecookie0101@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^0.24.0"
+  }
+}
