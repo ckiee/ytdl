@@ -1,7 +1,7 @@
 {
   "name": "ytdlfm",
   "version": "1.0.0",
-  "description": "Ytdl web interface bc mom needs one",
+  "description": "Ytdl web interface",
   "main": "app.js",
   "author": "RONTheCookie <ronthecookie0101@gmail.com>",
   "license": "MIT",
