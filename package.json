@@ -1,7 +1,7 @@
 {
   "name": "ytdlfm",
   "version": "1.0.0",
-  "description": "Ytdl web interface",
+  "description": "YTDL web interface",
   "main": "app.js",
   "author": "RONTheCookie <ronthecookie0101@gmail.com>",
   "license": "MIT",
