@@ -9,7 +9,7 @@
 <body>
     <form>
         <label for="yturl">Youtube URL</label>
-        <input type="url" name="yturl" id="yturl" placeholder="https://www.youtube.com/watch?v=ashk0ifguh">
+        <input type="url" name="yturl" id="yturl" style="width: 40vw;">
         <button type="submit" file-type="mp3">Download MP3</button>
         <button type="submit">Download MP4</button>
     </form>
@@ -25,6 +25,7 @@ document.querySelector("form").addEventListener("submit", async e => {
     }
     const type = btn.getAttribute("file-type") == "mp3" ? "mp3" : "mp4";
     window.open(`${location.origin}/api?url=${encodeURIComponent(yturl)}&type=${type}`);
+    document.querySelector("#yturl").value = "";
 });
 </script>
 </html>
