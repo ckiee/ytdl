@@ -9,5 +9,8 @@
     "express": "^4.16.3",
     "fluent-ffmpeg": "^2.1.2",
     "ytdl-core": "^0.24.0"
+  },
+  "scripts": {
+      "start": "node app.js"
   }
 }
