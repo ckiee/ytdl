@@ -1,5 +1,7 @@
-FROM node:11
+FROM jrottenberg/ffmpeg:3.3-alpine
+FROM node:11-alpine
 
+COPY --from=0 / /
 
 WORKDIR /usr/src/app
 
