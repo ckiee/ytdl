@@ -13,10 +13,10 @@ app.get("/api", async (req, res) => {
     if (!["mp3", "mp4"].includes(type)) return res.sendStatus(400);
     if (!yt_regex.test(url)) return res.sendStatus(400);
     const info = await ytdl.getBasicInfo(url);
-    res.setHeader("Content-Disposition", `attachment; filename=${info.title}.${type}`);
+    console.log(info);
+    res.setHeader("Content-Disposition", `attachment; filename=${info.title.split(" ").join("_")}.${type}`);
     if (type == "mp4") {
         ytdl(url).pipe(res);
-        console.log("testmp4lol");
     } else {
         ffmpeg(ytdl(url))
             .format("mp3")
